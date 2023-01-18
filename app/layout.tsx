@@ -1,4 +1,11 @@
 import './globals.css'
+import Nav from './components/Nav';
+import { Roboto } from "@next/font/google";
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: '400',
+  variable: "--font-roboto",
+});
 
 export default function RootLayout({
   children,
@@ -7,12 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
       <head />
-      <body>{children}</body>
+      <body className={`${roboto.variable} font-sans bg-slate-100 selection:bg-fuchsia-300 selection:text-fuchsia-900`}>
+        <Nav />
+        {children}
+      </body>
     </html>
   )
 }
