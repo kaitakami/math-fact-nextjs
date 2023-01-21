@@ -4,7 +4,8 @@ const nextConfig = {
     appDir: true,
   },
   env: {
-    PASSWORD: process.env.PASSWORD
+    DEEPL_AUTH_KEY: process.env.DEEPL_AUTH_KEY,
+    RAPIDAPI_KEY: process.env.RAPIDAPI_KEY
   }
 }
 

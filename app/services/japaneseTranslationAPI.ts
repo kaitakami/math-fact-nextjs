@@ -8,7 +8,7 @@ const translate = (fact: string) => {
         free_api: true,
         text: fact,
         target_lang: "JA",
-        auth_key: process.env.PASSWORD
+        auth_key: process.env.DEEPL_AUTH_KEY
     })
         .then((data: Response) => (
             {
